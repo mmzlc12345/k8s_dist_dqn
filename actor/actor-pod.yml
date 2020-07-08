@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: actor
+spec:
+  containers:
+  - name: actor
+    image: yck8s/dist_rl_actor:0.9
+    resources:
+       requests:
+         cpu: "2"
+         #limits:
+         #cpu: "4"
+

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: learner
+spec:
+  containers:
+  - name: learner
+    image: yck8s/dist_rl_learner:0.11
+    resources:
+       limits:
+         cpu: "4"
+       requests:
+         cpu: "2"
+

@@ -1,0 +1,25 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: actor-deployment
+spec:
+  selector:
+    matchLabels:
+      app: actor
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: actor
+    spec:
+      containers:
+      - name: actor
+        image: yck8s/dist_rl_actor:0.9 
+        resources:
+           requests:
+             cpu: "2"
+
+
+
+
+
